@@ -418,16 +418,16 @@ function install_perf {
 
 function prepare_base_env {
 	install_all_package
-	configure_dev_env
+	# configure_dev_env
 }
 
 function install_machnet {
 	prepare_base_env
 	# Install and set gcc-10 and g++-10 as the default compiler.
-	sudo apt install gcc-10 g++-10 libgflags-dev libgtest-dev
-	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
-		--slave /usr/bin/g++ g++ /usr/bin/g++-10 \
-		--slave /usr/bin/gcov gcov /usr/bin/gcov-10
+	# sudo apt install gcc-10 g++-10 libgflags-dev libgtest-dev
+	# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
+	# 	--slave /usr/bin/g++ g++ /usr/bin/g++-10 \
+	# 	--slave /usr/bin/gcov gcov /usr/bin/gcov-10
 	sudo apt-get --purge -y remove rdma-core librdmacm1 ibverbs-providers libibverbs-dev libibverbs1
 	install_rdma_core
 	install_dpdk
