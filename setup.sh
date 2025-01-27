@@ -98,7 +98,7 @@ function install_all_package {
 		python3-pyelftools libyaml-dev libcsv-dev nlohmann-json3-dev gcc g++ \
 		doxygen graphviz libhugetlbfs-dev libnl-3-dev libnl-route-3-dev \
 		uuid-dev git-lfs libbfd-dev libbinutils gettext libtraceevent-dev \
-		libzstd-dev libunwind-dev libreadline-dev numactl neovim )
+		libzstd-dev libunwind-dev libreadline-dev numactl neovim net-tools )
 
 	sudo apt install -y ${PACKAGES[@]}
 	pip install scapy flask
