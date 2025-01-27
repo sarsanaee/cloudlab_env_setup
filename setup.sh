@@ -15,10 +15,13 @@ function check_pre_conditions {
 	# 	exit 1
 	# fi
 
-	if [ ! -f $HOME/.ssh/id_dummy ]; then
-		echo "The dummy key is not imported yet!"
-		exit 1
-	fi
+	# if [ ! -f $HOME/.ssh/id_dummy ]; then
+	# 	echo "The dummy key is not imported yet!"
+	# 	exit 1
+	# fi
+	#
+	
+	echo "(skiping this ...)"
 }
 
 function install_clang {
@@ -98,7 +101,7 @@ function install_all_package {
 		python3-pyelftools libyaml-dev libcsv-dev nlohmann-json3-dev gcc g++ \
 		doxygen graphviz libhugetlbfs-dev libnl-3-dev libnl-route-3-dev \
 		uuid-dev git-lfs libbfd-dev libbinutils gettext libtraceevent-dev \
-		libzstd-dev libunwind-dev libreadline-dev numactl neovim net-tools )
+		libzstd-dev libunwind-dev libreadline-dev numactl neovim net-tools driverctl )
 
 	sudo apt install -y ${PACKAGES[@]}
 	pip install scapy flask
